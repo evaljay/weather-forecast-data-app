@@ -17,6 +17,8 @@ def get_data(place, forecast_days):
 
 
 if __name__ == "__main__":
-    print(get_data(place="Tokyo", forecast_days=3))
+    filtered_data = get_data(place="Tokyo", forecast_days=3)
+    print(filtered_data)
+    temp = [dict['main']['temp'] / 10 for dict in filtered_data]
 
-
+    print(temp)
